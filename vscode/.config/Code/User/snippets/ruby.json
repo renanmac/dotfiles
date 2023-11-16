@@ -1,0 +1,10 @@
+{
+	"Test case": {
+	 	"prefix": "spec",
+	 	"body": [
+	 		"RSpec.describe $1 do",
+			"end"
+	 	],
+	 	"description": "Add a test case"
+	 }
+}

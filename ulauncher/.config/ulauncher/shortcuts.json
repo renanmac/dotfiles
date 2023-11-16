@@ -1,0 +1,52 @@
+{
+    "56001ab1-4dc7-4795-81bc-210cee0f87a3": {
+        "id": "56001ab1-4dc7-4795-81bc-210cee0f87a3",
+        "name": "Google Search",
+        "keyword": "g",
+        "cmd": "https://google.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/google-search-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1648611156.8826194
+    },
+    "f07496e8-f189-4f3e-8524-db2b878365ff": {
+        "id": "f07496e8-f189-4f3e-8524-db2b878365ff",
+        "name": "Stack Overflow",
+        "keyword": "so",
+        "cmd": "https://stackoverflow.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1648611156.8826509
+    },
+    "fec49bce-65bc-42ff-95ec-28cc114a3f7a": {
+        "id": "fec49bce-65bc-42ff-95ec-28cc114a3f7a",
+        "name": "Wikipedia",
+        "keyword": "wiki",
+        "cmd": "https://en.wikipedia.org/wiki/%s",
+        "icon": "/usr/share/ulauncher/media/wikipedia-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1648611156.88267
+    },
+    "222532ca-f0dc-46cc-a030-40a461e31731": {
+        "id": "222532ca-f0dc-46cc-a030-40a461e31731",
+        "name": "BitBucket Search",
+        "keyword": "bb",
+        "cmd": "https://bitbucket.org/plugaco/workspace/repositories/?search=%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1648664374.8180687
+    },
+    "bd742382-931a-4f9a-af6b-ecea2904b3cb": {
+        "id": "bd742382-931a-4f9a-af6b-ecea2904b3cb",
+        "name": "RubyGems",
+        "keyword": "gem",
+        "cmd": "https://rubygems.org/gems/%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1672665372.51863
+    }
+}

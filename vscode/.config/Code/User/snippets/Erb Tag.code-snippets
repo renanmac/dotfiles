@@ -1,0 +1,7 @@
+{
+	"Add erb tag": {
+		"prefix": "t=",
+  	"body": ["<%$1%>"],
+ 	  "description": "Add a erb tag to html.erb files"
+	}
+}

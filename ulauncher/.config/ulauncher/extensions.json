@@ -1,0 +1,44 @@
+{
+    "com.github.renanmac.ulauncher-devdocs": {
+        "id": "com.github.renanmac.ulauncher-devdocs",
+        "url": "https://github.com/renanmac/ulauncher-devdocs.git",
+        "updated_at": "2022-03-30T00:42:47.086633",
+        "last_commit": "b077d75f16514aa3f885936d0c7e146738148acc",
+        "last_commit_time": "2022-03-30T03:42:06"
+    },
+    "com.github.hoaper.ulauncher-zh0per": {
+        "id": "com.github.hoaper.ulauncher-zh0per",
+        "url": "https://github.com/Hoaper/ulauncher-zh0per",
+        "updated_at": "2022-03-30T15:18:20.757548",
+        "last_commit": "5efaaff5eda26f2cc30f1f79d8e8c090b2fc4753",
+        "last_commit_time": "2021-11-05T16:39:39"
+    },
+    "com.github.friday.ulauncher-clipboard": {
+        "id": "com.github.friday.ulauncher-clipboard",
+        "url": "https://github.com/friday/ulauncher-clipboard",
+        "updated_at": "2022-03-31T20:26:13.921221",
+        "last_commit": "9c8c0de1fd86504754300da8278fbc3db9b1a2b5",
+        "last_commit_time": "2022-01-18T05:32:06"
+    },
+    "com.github.randomcharacter.ulauncher-meet": {
+        "id": "com.github.randomcharacter.ulauncher-meet",
+        "url": "https://github.com/randomCharacter/ulauncher-meet",
+        "updated_at": "2022-04-01T08:54:17.309814",
+        "last_commit": "f2fe055b6e21e15ea4c65918a6f499d61d4cf4b0",
+        "last_commit_time": "2021-02-26T22:04:21"
+    },
+    "com.github.manahter.ulauncher-translate": {
+        "id": "com.github.manahter.ulauncher-translate",
+        "url": "https://github.com/manahter/ulauncher-translate",
+        "updated_at": "2022-04-01T09:15:18.140240",
+        "last_commit": "f81d32c583c7e3542bdba655e991a56e6d9a2c28",
+        "last_commit_time": "2021-04-09T18:12:40"
+    },
+    "com.github.kleber-swf.ulauncher-toggle-dnd": {
+        "id": "com.github.kleber-swf.ulauncher-toggle-dnd",
+        "url": "https://github.com/kleber-swf/ulauncher-toggle-dnd",
+        "updated_at": "2022-04-01T14:16:13.766156",
+        "last_commit": "e2a14ba6eb7eb6771045e103a6f351585cdb8652",
+        "last_commit_time": "2022-02-10T13:22:17"
+    }
+}
