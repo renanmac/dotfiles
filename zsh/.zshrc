@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/renan/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -105,34 +105,33 @@ SPACESHIP_PROMPT_ORDER=(
   git           # Git section (git_branch + git_status)
   hg            # Mercurial section (hg_branch  + hg_status)
   exec_time     # Execution time
-  #line_sep      # Line break
-  vi_mode       # Vi-mode indicator
+  ruby
+  node
+  line_sep      # Line break
   jobs          # Background jobs indicator
   exit_code     # Exit code section
   char          # Prompt character
 )
 SPACESHIP_USER_SHOW=always
-SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
 ### Added by Zinit's installer
-if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+if [[ ! -f $HOME/.zinit/bin/zi.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing DHARMA Initiative Plugin Manager (zdharma/zinit)…%f"
     command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
     command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
         print -P "%F{33}▓▒░ %F{34}Installation successful.%f" || \
         print -P "%F{160}▓▒░ The clone has failed.%f"
 fi
-source "$HOME/.zinit/bin/zinit.zsh"
+source "$HOME/.zinit/bin/zi.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit installer's chunk
-zplugin light zdharma/fast-syntax-highlighting
-zplugin light zsh-users/zsh-autosuggestions
-zplugin light zsh-users/zsh-completions
+zinit light zdharma/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
 
 ## Load Scripts ##
-source "/etc/profile.d/rvm.sh"
 source $PLG_HOME/pluga-scripts/plg_curl.sh
 source $PLG_HOME/pluga-scripts/plg_ssh.sh
 
@@ -150,7 +149,7 @@ export PATH=$PATH:/home/renan/.local/bin/
 ## My aliases ##
 alias "copy=xclip -selection clipboard"
 alias "paste=xclip -o -selection clipboard"
-alias "rt=DB_HOST=127.0.0.1 RAILS_ENV=test rake db:drop db:create db:migrate db:seed spec"
+alias "rt=DB_HOST=127.0.0.1 RAILS_ENV=test bundle exec rails db:drop db:create db:migrate db:seed spec"
 alias "python2=python3"
 #alias "aws=docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli"
 alias "k=minikube kubectl --"
@@ -161,36 +160,13 @@ alias "cz=code ~/.zshrc"
 ## RVM WORKAROUND ##
 if [ -f '.ruby-gemset' ]; then cd .; fi
 
-## NVM AUTOLOAD ##
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
-
 ## Tilix Current Directory ##
 if [[ $TILIX_ID ]]; then
-  source /etc/profile.d/vte.sh
+  #source /etc/profile.d/vte.sh
 fi
 
 ## ASDF ##
 source $HOME/.asdf/asdf.sh
-source $HOME/.asdf/completions/asdf.bash
 
 ## Galaxy Buds 2 (enable mic functions) ##
 enable_bluetooth_mic() {

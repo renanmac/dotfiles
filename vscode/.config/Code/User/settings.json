@@ -1,7 +1,7 @@
 {
   // Editor Config
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "editor.insertSpaces": true,
   "editor.lineNumbers": "relative",
@@ -42,7 +42,7 @@
     "editor.formatOnType": true
   },
   // Ruby Config
-  "rubyLsp.rubyVersionManager": "rvm",
+  "rubyLsp.rubyVersionManager": "asdf",
   "rubyLsp.formatter": "auto",
   "rubyLsp.enabledFeatures": {
     "codeActions": true,
@@ -80,6 +80,11 @@
     "\\bclass:\\s*\"([^\"]*)\""
   ],
   // Vim Config
+  "vim.handleKeys": {
+    "<C-p>": false,
+    "<C-d>": true,
+    "<C-f>": false
+  },
   "vim.leader": "<space>",
   "vim.insertModeKeyBindingsNonRecursive": [
     {
@@ -130,11 +135,32 @@
       "commands": [
         "editor.action.revealDefinition"
       ]
+    },
+    {
+      "before": [
+        "leader",
+        "h"
+      ],
+      "after": [
+        "ctrl",
+        "w",
+        "h"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "shift",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.navigateRight"
+      ]
     }
   ],
   // Atlassian Config
   "yaml.schemas": {
-    "file:///home/renan/.vscode/extensions/atlassian.atlascode-3.0.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    "file:///home/renan/.vscode/extensions/atlassian.atlascode-3.0.9/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
   "atlascode.bitbucket.enabled": true,
   "atlascode.jira.enabled": false,
@@ -157,4 +183,5 @@
   ],
   "editor.formatOnSave": true,
   "workbench.sideBar.location": "right",
+  "editor.unicodeHighlight.nonBasicASCII": false,
 }

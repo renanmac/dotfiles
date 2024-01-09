@@ -28,13 +28,15 @@
   {
     "key": "ctrl+shift+r",
     "command": "workbench.action.terminal.sendSequence",
-    "args": { "text": "\u0012" }
+    "args": {
+      "text": "\u0012"
+    }
   },
   {
     "key": "ctrl+alt+g",
     "command": "workbench.action.terminal.splitActiveTab",
     "when": "terminalFocus"
-  }
+  },
   // File Explorer
   {
     "key": "ctrl+shift+e",
@@ -54,5 +56,25 @@
     "key": "ctrl+f",
     "command": "explorer.newFolder",
     "when": "explorerViewletFocus && filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "list.focusPageDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-list.focusPageDown",
+    "when": "listFocus && !inputFocus"
   }
 ]
