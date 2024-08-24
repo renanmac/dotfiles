@@ -156,6 +156,7 @@ alias "k=minikube kubectl --"
 alias "bat=batcat"
 alias "c=code ."
 alias "cz=code ~/.zshrc"
+alias "gbb=git branch | grep -v \"^\*\" |fzf --height=20% --reverse --info=inline | xargs git checkout"
 
 ## RVM WORKAROUND ##
 if [ -f '.ruby-gemset' ]; then cd .; fi
@@ -183,3 +184,6 @@ disable_bluetooth_mic() {
   systemctl --user --now disable pipewire pipewire-pulse pipewire.socket
   systemctl --user --now enable pulseaudio.service pulseaudio.socket
 }
+
+# fzf
+source <(fzf --zsh)

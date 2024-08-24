@@ -16,7 +16,7 @@
   ],
   "diffEditor.ignoreTrimWhitespace": false,
   "window.title": "${project}${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName}",
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "Dracula Theme",
   "security.workspace.trust.untrustedFiles": "open",
   // Emmet Config
   "emmet.includeLanguages": {
@@ -42,7 +42,9 @@
     "editor.formatOnType": true
   },
   // Ruby Config
-  "rubyLsp.rubyVersionManager": "asdf",
+  "rubyLsp.rubyVersionManager": {
+    "versionManager": "asdf"
+  },
   "rubyLsp.formatter": "auto",
   "rubyLsp.enabledFeatures": {
     "codeActions": true,
@@ -65,8 +67,8 @@
     "*.html.erb": "erb"
   },
   "[ruby]": {
-    "editor.defaultFormatter": "Shopify.ruby-lsp",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "misogi.ruby-rubocop"
   },
   "solargraph.transport": "stdio",
   "solargraph.diagnostics": true,
@@ -160,7 +162,7 @@
   ],
   // Atlassian Config
   "yaml.schemas": {
-    "file:///home/renan/.vscode/extensions/atlassian.atlascode-3.0.9/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    "file:///home/renan/.vscode/extensions/atlassian.atlascode-3.0.10/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
   "atlascode.bitbucket.enabled": true,
   "atlascode.jira.enabled": false,
@@ -176,7 +178,7 @@
     "scminput": false,
     "yaml": true
   },
-  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontFamily": "Fira Code",
   "gitlens.statusBar.enabled": false,
   "workbench.settings.applyToAllProfiles": [
     "terminal.integrated.fontFamily"
@@ -184,4 +186,7 @@
   "editor.formatOnSave": true,
   "workbench.sideBar.location": "right",
   "editor.unicodeHighlight.nonBasicASCII": false,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "vim.useSystemClipboard": true,
+  "i18n-ally.displayLanguage": "pt-BR",
 }
