@@ -14,10 +14,12 @@
     80,
     100
   ],
+  "editor.fontLigatures": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "window.title": "${project}${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName}",
   "workbench.colorTheme": "Dracula Theme",
   "security.workspace.trust.untrustedFiles": "open",
+  "accessibility.voice.speechLanguage": "pt-BR",
   // Emmet Config
   "emmet.includeLanguages": {
     "erb": "html",
@@ -35,6 +37,9 @@
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
+  "jestrunner.runOptions": [
+    "--silent"
+  ],
   // Python Config
   "python.pythonPath": "/usr/bin/python3",
   "jupyter.askForKernelRestart": false,
@@ -60,26 +65,36 @@
     "selectionRanges": true,
     "semanticHighlighting": true,
     "completion": true,
-    "codeLens": true
+    "codeLens": true,
+    "definition": true,
+    "signatureHelp": true,
+    "typeHierarchy": true,
+    "workspaceSymbol": true
   },
   "sorbet.enabled": true,
   "files.associations": {
-    "*.html.erb": "erb"
+    "*.html.erb": "erb",
   },
   "[ruby]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "misogi.ruby-rubocop"
+  },
+  "[erb]": {
+    "editor.defaultFormatter": "aliariff.vscode-erb-beautify",
+    "editor.formatOnSave": true
   },
   "solargraph.transport": "stdio",
   "solargraph.diagnostics": true,
   // Tailwind Config
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.includeLanguages": {
-    "erb": "html"
+    "erb": "html",
+    "ruby": "html",
   },
   "tailwindCSS.experimental.classRegex": [
-    "\\bclass:\\s*'([^']*)'",
-    "\\bclass:\\s*\"([^\"]*)\""
+    // "\\bclass:\\s*'([^']*)'",
+    // "\\bclass:\\s*\"([^\"]*)\"",
+    "\\bclass:\\s*[\"']([^\"']*)[\"']"
   ],
   // Vim Config
   "vim.handleKeys": {
@@ -158,11 +173,29 @@
       "commands": [
         "workbench.action.navigateRight"
       ]
+    },
+    {
+      "before": [
+        "leader",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.referenceSearch.trigger"
+      ]
     }
   ],
   // Atlassian Config
   "yaml.schemas": {
-    "file:///home/renan/.vscode/extensions/atlassian.atlascode-3.0.10/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    "file:///home/renan/.vscode/extensions/atlassian.atlascode-4.0.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
   "atlascode.bitbucket.enabled": true,
   "atlascode.jira.enabled": false,
@@ -173,7 +206,7 @@
   "todohighlight.isEnable": true,
   "github.copilot.enable": {
     "*": true,
-    "plaintext": false,
+    "plaintext": true,
     "markdown": true,
     "scminput": false,
     "yaml": true
@@ -184,9 +217,45 @@
     "terminal.integrated.fontFamily"
   ],
   "editor.formatOnSave": true,
-  "workbench.sideBar.location": "right",
   "editor.unicodeHighlight.nonBasicASCII": false,
   "github.copilot.editor.enableAutoCompletions": true,
   "vim.useSystemClipboard": true,
   "i18n-ally.displayLanguage": "pt-BR",
+  "editor.fontFamily": "'JetBrains Mono', 'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "workbench.sideBar.location": "right",
+  "window.titleBarStyle": "custom",
+  "tailwind-fold.autoFold": false,
+  "remote.defaultExtensionsIfInstalledLocally": [
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "GitHub.vscode-pull-request-github"
+  ],
+  "chat.agent.enabled": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "docker.extension.enableComposeLanguageServer": false,
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+    "/tmp/postman-http-request-post-response.instructions.md": true,
+    "/tmp/postman-http-request-pre-request.instructions.md": true,
+    "/tmp/postman-collections-post-response.instructions.md": true,
+    "/tmp/postman-collections-pre-request.instructions.md": true,
+    "/tmp/postman-folder-post-response.instructions.md": true,
+    "/tmp/postman-folder-pre-request.instructions.md": true
+  },
+  "atlascode.bitbucket.pipelines.monitorEnabled": false,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
 }
